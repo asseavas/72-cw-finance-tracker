@@ -1,11 +1,8 @@
+import FinancesApp from './containers/FinancesApp/FinancesApp';
 import './App.css';
 
 const App = () => {
-  return (
-    <>
-      <div>Hello</div>
-    </>
-  );
+  return <FinancesApp />;
 };
 
 export default App;
