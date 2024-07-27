@@ -1,18 +1,17 @@
 import React, { useEffect } from 'react';
 import { deleteCategory, fetchCategories } from '../../store/categoryThunks';
-import { useDispatch } from 'react-redux';
 import {
   selectCategories,
   selectDeleteCategoryLoading,
   selectFetchCategoriesLoading,
 } from '../../store/categorySlice';
-import { useAppSelector } from '../../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import Spinner from '../../components/Spinner/Spinner';
 import { toast } from 'react-toastify';
 import CategoryItem from '../../components/Categories/CategoryItem';
 
 const Categories: React.FC = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const categories = useAppSelector(selectCategories);
   const deleteLoading = useAppSelector(selectDeleteCategoryLoading);
   const categoriesLoading = useAppSelector(selectFetchCategoriesLoading);

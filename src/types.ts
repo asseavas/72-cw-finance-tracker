@@ -10,3 +10,21 @@ export interface Category extends ApiCategory {
 export interface ApiCategories {
   [id: string]: ApiCategory;
 }
+
+export interface ApiTransaction {
+  id: string;
+  category: string;
+  amount: number;
+  createdAt: string;
+  type: string;
+}
+
+export interface TransactionMutation {
+  type: string;
+  category: string;
+  amount: string;
+}
+
+export interface MergedTransaction extends ApiTransaction {
+  categoryName: string;
+}

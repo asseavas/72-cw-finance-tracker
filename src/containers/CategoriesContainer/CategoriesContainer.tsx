@@ -44,7 +44,7 @@ const CategoriesContainer = () => {
         title="Category"
         onClose={() => setShowModal(false)}
       >
-        <div className="modal-body">
+        <div className="modal-body d-flex align-items-center flex-column">
           <CategoryForm onSubmit={onSubmit} isLoading={isCreating} />
         </div>
         <div className="modal-footer">

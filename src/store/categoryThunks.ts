@@ -5,7 +5,7 @@ import axiosApi from '../axiosApi';
 
 export const fetchCategories = createAsyncThunk<
   Category[],
-  undefined,
+  void,
   { dispatch: AppDispatch }
 >('categories/fetchCategories', async () => {
   const categoriesResponse = await axiosApi.get<ApiCategories | null>(
