@@ -16,7 +16,7 @@ export interface ApiTransaction {
   category: string;
   amount: number;
   createdAt: string;
-  type: string;
+  type: 'income' | 'expense';
 }
 
 export interface TransactionMutation {
